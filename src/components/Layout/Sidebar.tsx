@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useUIStore } from '../../store';
 import { HROnly, useRole } from '../ui/RoleBasedAccess';
@@ -65,7 +65,11 @@ export const Sidebar: React.FC = () => {
                   transition={{ delay: 0.1 }}
                   className="ml-3 text-xl font-bold text-gray-900"
                 >
-                  TalentFlow
+                   <Link 
+            to="/dashboard" 
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >TalentFlow</Link>
+                  
                 </motion.span>
               )}
             </motion.div>

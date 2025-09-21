@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { useUIStore, useAppStore } from '../../store';
 import { HROnly, useRole } from '../ui/RoleBasedAccess';
 import { cn } from '../../utils';
@@ -54,6 +54,7 @@ export const Header: React.FC = () => {
       <div className="flex h-16 items-center justify-between px-4 sm:px-6">
         {/* Left side */}
         <div className="flex items-center space-x-4">
+
           {/* Mobile menu button - Only show for HR users */}
           <HROnly>
             <button
@@ -73,8 +74,8 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Center - Search - Only show for HR users */}
-        <HROnly>
-          <div className="flex-1 max-w-md mx-4">
+        {/* <HROnly>
+          {/* <div className="flex-1 max-w-md mx-4">
             <form onSubmit={handleSearch} className="relative">
               <Input
                 type="text"
@@ -85,8 +86,8 @@ export const Header: React.FC = () => {
                 className="w-full"
               />
             </form>
-          </div>
-        </HROnly>
+          </div> */}
+        {/* </HROnly>  */}
 
         {/* Right side */}
         <div className="flex items-center space-x-2">
@@ -141,9 +142,9 @@ export const Header: React.FC = () => {
                       </div>
                     </div>
                     <div className="mt-4">
-                      <Button variant="outline" size="sm" className="w-full">
+                      {/* <Button variant="outline" size="sm" className="w-full">
                         View all notifications
-                      </Button>
+                      </Button> */}
                     </div>
                   </div>
                 </div>

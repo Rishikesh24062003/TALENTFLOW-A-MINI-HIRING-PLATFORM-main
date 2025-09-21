@@ -178,9 +178,9 @@ const RecentActivity: React.FC = () => {
         ))}
       </div>
       <div className="px-6 py-4 border-t border-gray-200">
-        <Button variant="outline" size="sm" className="w-full">
+        {/* <Button variant="outline" size="sm" className="w-full">
           View all activity
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
