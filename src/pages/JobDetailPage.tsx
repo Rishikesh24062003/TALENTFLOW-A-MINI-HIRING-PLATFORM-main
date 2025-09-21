@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useJob, useUpdateJob } from '../hooks';
 import { formatDate, formatCurrency } from '../utils';

@@ -9,7 +9,6 @@ import {
   DragEndEvent,
 } from '@dnd-kit/core';
 import {
-  arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
@@ -18,7 +17,7 @@ import {
   useSortable,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { Job, JobFilters } from '../../types';
+import { Job } from '../../types';
 import { useJobs, useReorderJobs } from '../../hooks';
 import { useJobsStore, useUIStore } from '../../store';
 import { HROnly } from '../ui/RoleBasedAccess';

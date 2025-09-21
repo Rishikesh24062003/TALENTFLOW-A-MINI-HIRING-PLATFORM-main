@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useCandidate, useUpdateCandidate } from '../hooks';
-import { Candidate, CandidateStage, CandidateTimelineEvent } from '../types';
+import { CandidateStage, CandidateTimelineEvent } from '../types';
 import { formatDate, formatTimeAgo } from '../utils';
 import { Button } from '../components/ui/Button';
-import { Input } from '../components/ui/Input';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { 
   ArrowLeft,
@@ -12,16 +11,13 @@ import {
   Mail,
   Phone,
   Calendar,
-  MapPin,
   FileText,
-  Plus,
   Send,
   Clock,
   CheckCircle,
   XCircle,
   ArrowRight,
-  Download,
-  Edit2
+  Download
 } from 'lucide-react';
 
 interface TimelineItemProps {

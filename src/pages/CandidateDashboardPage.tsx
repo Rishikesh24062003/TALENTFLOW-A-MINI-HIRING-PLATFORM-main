@@ -5,14 +5,13 @@ import {
   BriefcaseIcon, 
   DocumentTextIcon,
   CalendarIcon,
-  CheckCircleIcon,
   ClockIcon,
   UserIcon,
   ChartBarIcon,
   EyeIcon
 } from '@heroicons/react/24/outline';
 import { useAppStore } from '../store';
-import { useJobs, useCandidates } from '../hooks';
+import { useJobs } from '../hooks';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { Button } from '../components/ui/Button';
 import { cn } from '../utils';

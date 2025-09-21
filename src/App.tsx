@@ -92,17 +92,6 @@ const AppInitializer: React.FC<{ children: React.ReactNode }> = ({ children }) =
   return <>{children}</>;
 };
 
-// Protected Route Component
-const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { user } = useAppStore();
-  
-  if (!user) {
-    return <Navigate to="/auth" replace />;
-  }
-  
-  return <>{children}</>;
-};
-
 // Role-based Route Components
 const HRProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAppStore();

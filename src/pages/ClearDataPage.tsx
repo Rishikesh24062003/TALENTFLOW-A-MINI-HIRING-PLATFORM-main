@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { 
@@ -12,7 +12,6 @@ import {
 export const ClearDataPage: React.FC = () => {
   const [isClearing, setIsClearing] = useState(false);
   const [isCleared, setIsCleared] = useState(false);
-  const navigate = useNavigate();
 
   const handleClearData = async () => {
     setIsClearing(true);

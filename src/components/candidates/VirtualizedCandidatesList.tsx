@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { Candidate, CandidateStage } from '../../types';
 import { useCandidates } from '../../hooks';
 import { useCandidatesStore } from '../../store';
-import { formatDate, formatTimeAgo } from '../../utils';
+import { formatTimeAgo } from '../../utils';
 import { Input } from '../ui/Input';
 import { LoadingSpinner } from '../ui/LoadingSpinner';
 import { 
@@ -13,7 +13,6 @@ import {
   Mail,
   Phone,
   Calendar,
-  MapPin,
   ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAssessment, useSaveAssessment, useJobs } from '../hooks';
-import { Assessment, AssessmentSection } from '../types';
+import { Assessment } from '../types';
 import { AssessmentBuilder } from '../components/assessments/AssessmentBuilder';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { Button } from '../components/ui/Button';

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useJob } from '../hooks';
-import { useAppStore } from '../store';
 import { formatDate, formatCurrency } from '../utils';
 import { Button } from '../components/ui/Button';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
@@ -22,7 +21,6 @@ import {
 
 export const CandidateJobDetailPage: React.FC = () => {
   const { jobId } = useParams<{ jobId: string }>();
-  const { user } = useAppStore();
   const { data: job, isLoading, error } = useJob(jobId!);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showShareMenu, setShowShareMenu] = useState(false);

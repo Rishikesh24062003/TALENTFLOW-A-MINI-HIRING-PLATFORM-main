@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useUIStore } from '../../store';
-import { HROnly, useRole } from '../ui/RoleBasedAccess';
+import { useRole } from '../ui/RoleBasedAccess';
 import { cn } from '../../utils';
 import {
   HomeIcon,

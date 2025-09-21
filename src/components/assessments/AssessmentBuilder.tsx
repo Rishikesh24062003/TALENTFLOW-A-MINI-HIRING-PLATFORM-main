@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { 
   Assessment, 
   AssessmentSection, 
@@ -17,8 +17,6 @@ import {
   Plus, 
   Trash2, 
   Eye, 
-  Settings, 
-  Move,
   ChevronDown,
   ChevronRight,
   GripVertical
