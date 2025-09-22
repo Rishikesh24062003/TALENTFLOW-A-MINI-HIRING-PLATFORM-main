@@ -12,7 +12,6 @@ import {
   DragOverlay,
 } from '@dnd-kit/core';
 import {
-  arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
@@ -28,7 +27,6 @@ import { formatTimeAgo } from '../../utils';
 import { LoadingSpinner } from '../ui/LoadingSpinner';
 import { 
   User,
-  Mail,
   Phone,
   Calendar,
   Plus,
@@ -196,18 +194,18 @@ export const KanbanBoard: React.FC<KanbanBoardProps> = ({ className = '' }) => {
     })
   );
 
-  const stages: Array<{
+  const stages = React.useMemo<Array<{
     stage: CandidateStage;
     title: string;
     color: string;
-  }> = [
+  }>>(() => [
     { stage: 'applied', title: 'Applied', color: 'bg-blue-500' },
     { stage: 'screen', title: 'Phone Screen', color: 'bg-yellow-500' },
     { stage: 'tech', title: 'Technical Interview', color: 'bg-purple-500' },
     { stage: 'offer', title: 'Offer Extended', color: 'bg-orange-500' },
     { stage: 'hired', title: 'Hired', color: 'bg-green-500' },
     { stage: 'rejected', title: 'Rejected', color: 'bg-red-500' },
-  ];
+  ], []);
 
   const candidatesByStage = React.useMemo(() => {
     return stages.reduce((acc, { stage }) => {
