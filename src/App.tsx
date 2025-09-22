@@ -39,9 +39,7 @@ const queryClient = new QueryClient({
 });
 
 // Start Mirage server in development
-if (process.env.NODE_ENV === 'development') {
   makeServer();
-}
 
 // App initialization component
 const AppInitializer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
